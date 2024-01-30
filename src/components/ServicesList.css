@@ -1,0 +1,246 @@
+.cards-section-main {
+    background-color: #fdfdfd;
+    padding: 20px; /* Adjust padding as needed */
+}
+
+.services-container {
+    /* background-color: yellow; */
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap into multiple rows */
+    justify-content: space-between;
+    padding: 10px; /* Adjust padding as needed */
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+.service-card-container {
+    position: relative;
+    background-color: white;
+    width: 47%; /* Adjust width to fit two cards in each row */
+    height: 220px;
+    margin-bottom: 40px; /* Adjust margin between cards as needed */
+    display: flex;
+    overflow: hidden; /* Ensure image and label stay within card container */
+    position: relative; /* Position label relative to image container */
+    transition: background-color 0.7s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.bg-color{
+    position: absolute;
+    background-color: #b882fc;
+    margin-left: 97%;
+    width: 20px;
+    height: 18px;
+    transition: all 0.5s ease;
+}
+
+
+.service-card-container:hover .bg-color {
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+}
+
+.main-img-container {
+    padding: 15px 10px;
+}
+
+.main-img-container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; 
+} 
+
+.main-img-container span {
+    position: absolute;
+    top: 4%;
+    right: 60%;
+    background-color: #5f2dee;
+    color: white;
+    padding: 18px 25px;
+    border: 10px solid white;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bold;
+    transition: background-color 1.3s ease;
+}
+
+.content-container-main {
+    padding-left: 40px;
+    padding-right: 15px;
+    padding-top: 30px;
+    background-image: url("../assets/bg-service3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: color 0.6s ease;
+}
+
+.service-card-container:hover .content-container-main {
+    z-index: 1;
+    color: white; /* Change content color to white on hover */
+}
+
+.service-card-container:hover .main-img-container span {
+    background-color: #b882fc;
+}
+
+.service-card-container:hover .main-img-container {
+    z-index: 1;
+}
+
+/* Media queries for responsive layout */
+@media (max-width: 1024px) {
+    .service-card-container {
+        width: 100%; /* Display one card per row on screens up to 1024px */
+    }
+    .main-img-container span {
+        top: 3%;
+        right: 74%;
+    }
+    .bg-color {
+        margin-left: 98%;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-card-container {
+        width: 100%; /* Display one card per row on screens up to 768px */
+    }
+    .main-img-container span {
+        top: 3%;
+        right: 65%;
+    }
+    .bg-color {
+        height: 15px;
+        width: 15px;
+        top: 0;
+        margin-left: 97.7%;
+    }
+}
+
+@media (max-width: 425px) {
+    .service-card-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%; /* Display one card per row on screens up to 425px */
+        height: 285px;
+        padding-top: 22px;
+        padding-bottom: 10px;
+    }
+    .main-img-container {
+        text-align: center;
+        padding: 0;
+    }
+    .main-img-container img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%; 
+    }
+
+    .main-img-container span {
+        top: 4%;
+        right: 18%;
+        padding: 10px 18px;
+    }
+
+    .content-container-main {
+        text-align: center;
+        padding: 2px;
+    }
+    .content-container-main p {
+        font-size: 13px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .bg-color {
+        top: 0;
+        margin-left: 95%;
+        width: 15px;
+    }
+}
+
+@media (max-width: 375px) {
+    .service-card-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%; /* Display one card per row on screens up to 425px */
+        height: 290px;
+    }
+    .main-img-container {
+        text-align: center;
+        padding: 0;
+        padding-top: 15px;
+    }
+    .main-img-container img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%; 
+    }
+
+    .main-img-container span {
+        top: 4%;
+        right: 18%;
+        padding: 10px 18px;
+    }
+
+    .content-container-main {
+        text-align: center;
+        padding: 0;
+    }
+    .content-container-main p {
+        font-size: 12px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .bg-color {
+        margin-left: 94%;
+        width: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    .service-card-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%; /* Display one card per row on screens up to 425px */
+        height: 310px;
+    }
+    .main-img-container {
+        text-align: center;
+        padding: 0;
+        padding-top: 15px;
+    }
+    .main-img-container img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%; 
+    }
+
+    .main-img-container span {
+        top: 4%;
+        right: 18%;
+        padding: 6px 15px;
+        border: 7px solid white;
+    }
+
+    .content-container-main {
+        text-align: center;
+        padding: 2px;
+    }
+
+    .content-container-main p {
+        font-size: 12px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .bg-color {
+        margin-left: 93%;
+        width: 15px;
+    }
+}
