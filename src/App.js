@@ -1,9 +1,12 @@
-import Services from "./components/Services";
+// import Services from "./components/Services";
+import About from "./components/About";
+
 
 function App() {
   return (
     <div>
-      <Services/>
+      {/* <Services/> */}
+      <About/>
     </div>
   );
 }
